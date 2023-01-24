@@ -41,7 +41,8 @@ if (isset($_POST['add_comment'])) {
 	echo "<center><table class='styled-table'>"; 
 
 		while($row = $result->fetch_assoc()){ 
-			echo "<tr><td>" . date_format(new DateTime($row['timestamp']), 'g:ia \o\n l jS F Y') . "</td><td>" . ucfirst($row['username']) . "</td><td>" . $row['comment'] ."</td></tr>"; 
+			echo "<tr><td>" . date_format(new DateTime($row['timestamp']), 'g:ia \o\n l jS F Y') . "</td><td>" 
+			. ucfirst($row['username']) . "</td><td>" . $row['comment'] ."</td></tr>"; 
 		}
 
 		echo "</table></center>"; 	
